@@ -28,6 +28,7 @@ body {
     font-size: 14px;
     background-color: $white;
 
+    // Header
     .header {
         .wrapper {
             height: 100%;
@@ -54,13 +55,11 @@ body {
             span {
                 color: $blue;
             }
-
         }
 
         .header-menu {
             display: flex;
             align-items: center;
-            
 
             .burger-menu {
                 margin-left: 20px;
@@ -73,14 +72,13 @@ body {
                 .fas {
                     font-size: 28px;
                 }
-
-
             }
 
             nav {
                 width: 389px;
                 height: 70px;
                 padding-top: 25px;
+
                 @media screen and (max-width:1024px) {
                     display: none;
                 }
@@ -105,7 +103,8 @@ body {
                             width: 183px;
                             opacity: 0;
                             list-style-type: none;
-                            background-color: rgba(0, 0, 0, 0.5);;
+                            background-color: rgba(0, 0, 0, 0.5);
+                            ;
                             border-top: 2px solid $yellow;
                             transition: 0.01s all;
 
@@ -113,6 +112,7 @@ body {
                                 &:hover .drop {
                                     opacity: 1;
                                 }
+
                                 .drop {
                                     position: absolute;
                                     top: 10%;
@@ -120,6 +120,7 @@ body {
                                     opacity: 0;
                                 }
                             }
+
                             li {
                                 padding-left: 18px;
                             }
@@ -130,13 +131,9 @@ body {
 
                                 &:hover {
                                     color: $yellow;
-
                                 }
-
                             }
-
                         }
-
                     }
 
                     li {
@@ -151,7 +148,6 @@ body {
                             &:hover {
                                 font-weight: bold;
                             }
-
                         }
                     }
                 }
@@ -164,6 +160,10 @@ body {
                 margin: 0 auto;
                 background: rgb(232, 228, 241);
                 margin-left: 45px;
+
+                @media screen and (max-width:320px) {
+                    display: none;
+                }
 
                 input,
                 button {
@@ -187,16 +187,17 @@ body {
                     cursor: pointer;
                 }
 
-                button:before {
+                button::before {
                     content: "\f002";
-                    font-family: FontAwesome;
+                    font-family: "FontAwesome";
                     font-size: 16px;
                     color: rgb(89, 89, 89);
                 }
             }
-
         }
     }
+
+    //Header Slider
 
     .bd-example {
         height: 100%;
@@ -219,12 +220,12 @@ body {
 
             p {
                 display: inline-block;
-                width: 721px;
+                max-width: 721px;
                 color: $white;
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 30px;
-                padding-bottom: 18vw;
+                padding-bottom: 17vw;
             }
         }
 
@@ -239,9 +240,9 @@ body {
         }
     }
 
-
+    // WHY CHOOSE US
     main {
-        .us {
+        .about {
             .title {
                 text-align: center;
 
@@ -256,12 +257,11 @@ body {
                     span {
                         color: $blue;
                     }
-
                 }
 
                 p {
                     display: inline-block;
-                    width: 694px;
+                    max-width: 694px;
                     font-weight: 400;
                     color: rgb(153, 153, 153);
                     font-size: 14px;
@@ -269,7 +269,6 @@ body {
                     letter-spacing: 0.56px;
                     padding-top: 33px;
                 }
-
             }
 
             .cards {
@@ -278,11 +277,20 @@ body {
                 display: flex;
                 justify-content: space-between;
 
+                @media screen and (max-width:320px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
                 .card {
                     position: relative;
-                    width: 200px;
+                    max-width: 200px;
                     border: 1px solid rgb(235, 235, 235);
                     text-align: center;
+
+                    @media screen and (max-width:320px) {
+                        margin-bottom: 20px;
+                    }
 
 
                     h3 {
@@ -310,7 +318,6 @@ body {
                         font-size: 60px;
                         padding-top: 41px;
                         padding-bottom: 60px;
-
                     }
 
                     .overlay {
@@ -368,6 +375,7 @@ body {
             }
         }
 
+        //  About Us
         .block {
             display: flex;
             justify-content: space-between;
@@ -395,7 +403,6 @@ body {
                         line-height: 24px;
                         letter-spacing: 0.56px;
                         padding-top: 34px;
-
                     }
                 }
 
@@ -495,9 +502,7 @@ body {
                                 100% {
                                     width: 92%;
                                 }
-
                             }
-
                         }
 
                         h3,
@@ -513,7 +518,6 @@ body {
 
                         h4 {
                             float: right;
-
                         }
                     }
                 }
@@ -523,16 +527,20 @@ body {
                 width: 334px;
                 height: 471px;
                 margin-top: 219px;
+
                 img {
                     width: 100%;
                 }
 
+                @media screen and (max-width:320px) {
+                    display: none;
+                }
             }
         }
     }
 
+    // Footer
     .footer {
-
         .title {
             text-align: center;
             padding-top: 200px;
@@ -546,7 +554,6 @@ body {
 
                 span {
                     color: $blue;
-
                 }
             }
 
@@ -554,7 +561,7 @@ body {
                 display: inline-block;
                 padding-top: 33px;
                 padding-bottom: 80px;
-                width: 694px;
+                max-width: 694px;
                 color: rgb(153, 153, 153);
                 font-weight: 400;
                 line-height: 24px;
@@ -574,8 +581,6 @@ body {
                 top: 0;
                 left: 0;
                 z-index: 0;
-
-
             }
 
             .contactform {
@@ -595,7 +600,6 @@ body {
                     display: flex;
                     flex-wrap: wrap;
 
-
                     input,
                     textarea {
                         border: none;
@@ -606,7 +610,6 @@ body {
                         font-size: 16px;
                         font-weight: 400;
                         padding: 10px;
-
                     }
 
                     .name {
@@ -620,7 +623,6 @@ body {
                         height: 50px;
                         border: 1px solid $white;
                         margin-left: 11px;
-
                     }
 
                     .message {
@@ -628,7 +630,6 @@ body {
                         height: 144px;
                         border: 1px solid $white;
                         margin-top: 11px;
-
                     }
 
                     .checkbox {
@@ -654,29 +655,22 @@ body {
                             color: rgb(55, 55, 55);
                             font-size: 18px;
                             font-weight: 600;
-
-
                         }
-
                     }
-
-
                 }
 
                 .contact {
                     height: 206px;
                     width: 174px;
-                    color:rgb(243, 243, 243);
+                    color: rgb(243, 243, 243);
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 24px;
-
                 }
-
-
             }
-
         }
+
+        // Footer
 
         .footer {
             padding-left: 30px;
@@ -688,11 +682,20 @@ body {
             justify-content: space-between;
             align-items: center;
 
+            @media screen and (max-width:320px) {
+                flex-direction: column;
+            }
+
             .copyright {
                 color: rgb(122, 122, 122);
                 font-size: 16px;
                 font-weight: 400;
                 letter-spacing: 0.4px;
+
+                @media screen and (max-width:320px) {
+                    font-size: 12px;
+                    text-align: center;
+                }
             }
 
             .social {
